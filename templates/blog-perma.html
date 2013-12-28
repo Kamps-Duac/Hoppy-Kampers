@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+	<title>Blog</title>
+{% endblock %}
+
+{% block content %}
+
+	<div class="body">
+		<div class="blog-subject">{{blog.name}}</div>
+		<div class="blog-created">Posted on {{blog.created.strftime("%b %d, %Y")}}</div>
+		<pre class="blog-content">{{blog.content}}</pre>
+	</div>
+	<br><br>
+
+	<div class="age">
+		{{age}}
+	</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		{% block title %}
+		{% endblock %}
+		<link rel="stylesheet" type="text/css" href="/static/dropdown.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="/static/asci.css" /> #now in styles.css -->
+		<link rel="stylesheet" type="text/css" href="/static/styles.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" />
+	</head>
+
+	<body>
+		<div id="welcome">
+			<h1 id="main_head"><a href="/" style="text-decoration: none;">Hoppy Kampers</a></h1>
+			<!-- Navigation Menu -->
+			<nav>
+			  <ul>
+			  	<li><a href="/">Home</a></li>
+			    <li><a href="/blog">Beer Recipies</a>
+			    	<ul>
+			    		<li><a href="/blog/newpost">New Post</a></li>
+			    		<li><a href="/blog/flush">Flush Memcache</a></li>
+			    	</ul>
+			    </li>
+			    <li><a href="/ascii">Ascii</a></li></ul>
+			</nav>
+
+			 <div class="user">
+			 	<a class="user-link" href="/blog/signup">Signup</a>
+			 	|
+			    <a class="user-link" href="/login">Login</a>
+			  </div>
+		</div>
+			<div id="content">
+				{% block content %}
+				{% endblock %}
+			</div>
+		
+		<div class="footer">Brought to you by Scott Kamps-Duac</div>
+	</body>
+</html>

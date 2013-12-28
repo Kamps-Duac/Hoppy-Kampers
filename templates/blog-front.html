@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}
+	<title>Beer Recipies</title>
+{% endblock %}
+
+{% block content %}
+
+	<h2>Beer Recipies</h2>
+
+	<form method="post">
+
+	</form>
+
+	<hr>
+
+	{% for blog in blogs %}
+	    <div class="body">
+	    	<div class="blog-beer-name">
+	    		<h2>{{blog.name}}</h2>
+	    	</div>
+	    	<div class="blog-created">Posted on {{blog.created.strftime("%b %d, %Y")}}</div>
+	    	<div class="blog-info">
+	    		<h5>Style</h5>
+	    			{{blog.style}}
+	    	</div>
+	    	<div class="blog-info">
+	    		<h5>Type</h5>
+	    			{{blog.recipe_type}}
+	    	</div>
+	    	<div class="blog-info">
+	    		<h5>Batch Size</h5>
+	    			{{blog.size}}
+	    	</div>
+	    	<div class="blog-info">
+	    		<h5>Original Gravity</h5>
+	    			{{blog.og}}
+	    	</div>
+	    	<div class="blog-info">
+	    		<h5>Final Gravity</h5>
+	    			{{blog.fg}}
+	    	</div>
+	    	<div class="blog-info">
+	    		<h5>Description</h5>
+	    			{{blog.description}}
+	    	</div>
+	    	<div class="blog-info">
+	    		<h5>Malt</h5>
+	    			{{blog.malt}}
+	    	</div>
+	    	<div class="blog-info">
+	    		<h5>Hops</h5>
+	    			{{blog.hops}}
+	    	</div>
+	    	<div class="blog-info">
+	    		<h5>Yeast</h5>
+	    			{{blog.yeast}}
+	    	</div>
+	    	
+	    	<pre class="blog-content">{{blog.content}}</pre>
+
+	    </div>
+	{% endfor %}
+
+	<div class="age">
+		{{age}}
+	</div>
+
+{% endblock %}

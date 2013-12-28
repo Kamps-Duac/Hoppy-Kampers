@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}
+	<title>Blog | New Post</title>
+{% endblock %}
+
+{% block content %}
+
+	<h2>New Beer Recipe</h2>
+
+	<form method="post">
+		<table class="beer_form">
+			<tr>
+				<td>
+					Beer Name
+				</td>
+				<td>
+					<input type="text" name="name" value="{{name}}">
+				</td>
+				<td class="error">
+					{{error['name_error']}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Beer Style
+				</td>
+				<td>
+					<input type="text" name="style" value="{{style}}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Recipe Type
+				</td>
+				<td>
+					<input type="text" name="recipe_type" value="{{recipe_type}}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Batch Size (gallons)
+				</td>
+				<td>
+					<input type="number" name="size" value="{{size}}" min="1" max="12" step=".5">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Original Gravity
+				</td>
+				<td>
+					<input type="number" name="og" value="{{og}}" min="1" max="3" step=".001">
+				</td>
+				<td class="error">
+					{{error['og_error']}}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Final Gravity
+				</td>
+				<td>
+					<input type="number" name="fg" value="{{fg}}" min="1" max="3" step=".001">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Description
+				</td>
+				<td>
+					<textarea name="description">{{description}}</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Ingredients
+				</td>
+				<td>
+					<input type="text" name="ingredients" value="{{ingredients}}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Malt
+				</td>
+				<td>
+					<input type="text" name="malt" value="{{malt}}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Hops
+				</td>
+				<td>
+					<input type="text" name="hops" value="{{hops}}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Yeast
+				</td>
+				<td>
+					<input type="text" name="Yeast" value="{{yeast}}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Special Notes
+				</td>
+				<td>
+					<textarea name="content">{{content}}</textarea>
+				</td>
+			</tr>
+
+		<!-- <div class="error">{{error['name_error']}}</div> -->
+
+			<tr>
+				<td>
+					<input type="submit">
+				</td>
+			</tr>
+	
+		</table>
+	</form>
+
+{% endblock %}
