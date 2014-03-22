@@ -15,6 +15,6 @@ The Ascii Art channel on my page was an 'in-class' assignment. I simply integrat
 
 Visit my Beer Blog!
 
-http://scott-udacity.appspot.com/
+http://scottkampsduac.appspot.com/
 
 Ciao for now!
