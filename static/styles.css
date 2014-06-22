@@ -45,10 +45,21 @@ h1, h1 a {
 
 #content {
     background: -webkit-linear-gradient(top, #efefef 20%, #bbbbbb 80%);
+    background-color:#bbbbbb;
     margin: auto;
     left: 0;
     padding: 10px;
     width: 90%;
+}
+
+#content h2 {
+    margin: auto;
+    text-align: center;
+    border: 2px solid #a1a1a1;
+    padding: 10px 20px; 
+    background: #dddddd;
+    width: 25%;
+    border-radius: 25px;
 }
 
 #content h5 {
